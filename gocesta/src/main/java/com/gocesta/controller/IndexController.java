@@ -10,6 +10,7 @@ public class IndexController {
 
 	  @RequestMapping(method = RequestMethod.GET)
 	    public String getIndexPage() {
+		  System.out.println("Test for first check in");
 	        return "UserManagement";
 	    }
 
