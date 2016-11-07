@@ -25,7 +25,7 @@ public class HelloWorldConfiguration extends WebMvcConfigurerAdapter{
 
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		registry.addResourceHandler("webapp/static/**").addResourceLocations("webapp/static/");
+		registry.addResourceHandler("/static/**").addResourceLocations("/static/");
 	}
 
 }
