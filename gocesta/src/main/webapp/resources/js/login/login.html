@@ -1,0 +1,85 @@
+
+
+<div>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 col-lg-offset-1">
+                    <div class="device-container">
+                    	<div id="messages" class="alert alert-danger" data-ng-show="message">{{ message }}</div>
+                       <form  id="loginform" name="loginform" class="form-horizontal home-login" novalidate="novalidate">
+						 <h3>Get started now, YuGa trial pack.</h3>
+						 
+						 <fieldset>
+						 
+								<div class="form-group" data-ng-class="{ 'has-error' : loginform.username.$invalid && !loginform.username.$pristine }">							 
+								  <div class="col-lg-12">
+							            <input type="email" name="username" id="username" class="form-control" placeholder="E-mail" data-ng-model="login.credentials.username" data-ng-minlength="1"  required>
+							           <p data-ng-show="loginform.username.$invalid && (loginform.username.$touched || !loginform.username.$pristine)" class="help-block" id="usernamePtag">Enter a valid email.</p>
+							       
+								  </div>
+								  
+								</div>
+								
+								<div class="form-group" data-ng-class="{ 'has-error' : loginform.password.$invalid && !loginform.password.$pristine }">						 
+								  <div class="col-lg-12">
+									<input data-ng-model="login.credentials.password" type="password" class="form-control" id="password" name="password" placeholder="Password" data-ng-minlength="3" required>								
+								  <p data-ng-show="loginform.password.$invalid && (loginform.password.$touched || !loginform.password.$pristine)" class="help-block" id="passwordPtag">You password is required.</p>
+								  
+								  </div>
+								</div>
+								
+								<div class="form-group">
+								<div class="checkbox pull-left hover-color" style="padding-left: 13px;padding-top: 0;">
+					                  <label>
+					                    <input type="checkbox" checked>Remember Me
+					                  </label>
+					                </div>							 
+								  <div class="col-lg-12 pull-right text-right hover-color" style="width:50%;">
+									<a href='<c:url value="/forgotPassword"/>' id="forgetPassword" style="color:#fff;" >Forgot Password</a>								
+								  </div>
+								</div>
+								
+								<div class="form-group">							 
+								  <div class="col-lg-12">
+									<p class="termsofservice">By clicking 'Create account', you agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>							
+								  </div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-12 controls signin">
+										<button type="submit" id="login" class="btn btn-info btn-success" data-ng-disabled="loginform.$invalid">Log In</button>
+									</div>
+								</div>
+								<input type="hidden" name="${_csrf.parameterName}"
+									value="${_csrf.token}" />
+							</fieldset>
+						</form>
+
+						</div>
+						</div>
+            </div>
+        </div>
+    </header>
+</div>
+      
+<style>
+	.hover-color a:hover, .hover-color label:hover{
+	color:#fdcc52 !important;
+	}
+	 .help-block {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: -12px;
+    color: #e49595 !important;
+    font-size: 12px;
+}
+.has-error .form-control:focus {
+    border-color: #e49595 ;
+    -webkit-box-shadow: inset 0 0px 0px rgba(0,0,0,.075),0 0 0px #ce8483;
+    box-shadow: inset 0 0px 0px rgba(0,0,0,.075),0 0 0px #ce8483;
+}
+</style>
+    
+
+
+

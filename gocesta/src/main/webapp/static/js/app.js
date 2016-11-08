@@ -1,6 +1,6 @@
 'use strict';
 
-var yugaApp = angular.module('gocesta',[ 'ngRoute' ])
+var gocestaApp = angular.module('gocesta',[ 'ngRoute' ])
 .config(
 
 		function($routeProvider, $httpProvider, $locationProvider) {
